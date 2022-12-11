@@ -20,6 +20,12 @@ public class Competition {
         this.annee = annee;
         MDB.createCompetition(Ncomp, Nom, Pays, annee);
     }
+    public Competition(int Ncomp, String Nom, String Pays, int annee,int i) throws SQLException {
+        this.Ncomp = Ncomp;
+        this.Nom = Nom;
+        this.Pays = Pays;
+        this.annee = annee;
+    }
     //getters and setters
     public int getNcomp() {
         return Ncomp;

@@ -60,7 +60,7 @@ public class MDB {
 
     }
     //getTeam method
-    public static Team getTeam(int ID_E) throws SQLException {
+    public static Team getTeam_byID(int ID_E) throws SQLException {
         String query = "SELECT * FROM Team WHERE ID_E = ?";
         PreparedStatement preparedStmt = connection.prepareStatement(query);
         preparedStmt.setInt(1, ID_E);
@@ -78,7 +78,7 @@ public class MDB {
         Competition[] competitions = new Competition[10];
         int i = 0;
         while (rs.next()) {
-            competitions[i] = new Competition(rs.getInt("Ncomp"), rs.getString("Nom"), rs.getString("Pays"), rs.getInt("annee"));
+            competitions[i] = new Competition(rs.getInt("Ncomp"), rs.getString("Nom"), rs.getString("Pays"), rs.getInt("annee"),1);
             i++;
         }
         return competitions;
