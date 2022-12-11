@@ -12,7 +12,6 @@ public class Competition {
     private int[] teamList = new int[10];
 
 
-    //constructor that create compettion
     public Competition(int Ncomp, String Nom, String Pays, int annee) throws SQLException {
         this.Ncomp = Ncomp;
         this.Nom = Nom;
@@ -26,7 +25,6 @@ public class Competition {
         this.Pays = Pays;
         this.annee = annee;
     }
-    //getters and setters
     public int getNcomp() {
         return Ncomp;
     }
@@ -51,7 +49,6 @@ public class Competition {
     public void setAnnee(int annee) {
         this.annee = annee;
     }
-    //addTeam(ID_E)
     public void addTeam(Team Team) {
         teamList[teamList.length] = Team.getID_E();
     }

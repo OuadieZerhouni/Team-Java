@@ -24,7 +24,6 @@ public class MDB {
     //Compettion(Ncomp,Nom,Pays,annee)
     //participer(ID_E,Ncomp,CL(Classement))
 
-    //createTeam method
     public static void createTeam(int ID_E, String Nom, String Pays) throws SQLException {
         String query = "INSERT INTO Team(ID_E,Nom,Pays) VALUES(?,?,?)";
 
@@ -36,7 +35,6 @@ public class MDB {
 
     }
 
-    //CreateCompetition method
     public static void createCompetition(int Ncomp, String Nom, String Pays, int annee) throws SQLException {
         String query = "INSERT INTO Competition(Ncomp,Nom,Pays,annee) VALUES(?,?,?,?)";
 
@@ -48,7 +46,6 @@ public class MDB {
             preparedStmt.execute();
 
     }
-    //CreateParticipe 
     public static void createParticipe(int ID_E, int Ncomp, int CL) throws SQLException {
         String query = "INSERT INTO Participer(ID_E,Ncomp,CL) VALUES(?,?,?)";
 
@@ -59,7 +56,6 @@ public class MDB {
             preparedStmt.execute();
 
     }
-    //getTeam method
     public static Team getTeam_byID(int ID_E) throws SQLException {
         String query = "SELECT * FROM Team WHERE ID_E = ?";
         PreparedStatement preparedStmt = connection.prepareStatement(query);
@@ -70,7 +66,6 @@ public class MDB {
         }
         return null;
     }
-    //getCompetitions method reutrn list
     public static Competition[] getCompetitions() throws SQLException {
         String query = "SELECT * FROM Competition";
         PreparedStatement preparedStmt = connection.prepareStatement(query);
