@@ -59,6 +59,31 @@ public class MDB {
             preparedStmt.execute();
 
     }
+    //getTeam method
+    public static Team getTeam(int ID_E) throws SQLException {
+        String query = "SELECT * FROM Team WHERE ID_E = ?";
+        PreparedStatement preparedStmt = connection.prepareStatement(query);
+        preparedStmt.setInt(1, ID_E);
+        ResultSet rs = preparedStmt.executeQuery();
+        if (rs.next()) {
+            return new Team(rs.getInt("ID_E"), rs.getString("Nom"), rs.getString("Pays"));
+        }
+        return null;
+    }
+    //getCompetitions method reutrn list
+    public static Competition[] getCompetitions() throws SQLException {
+        String query = "SELECT * FROM Competition";
+        PreparedStatement preparedStmt = connection.prepareStatement(query);
+        ResultSet rs = preparedStmt.executeQuery();
+        Competition[] competitions = new Competition[10];
+        int i = 0;
+        while (rs.next()) {
+            competitions[i] = new Competition(rs.getInt("Ncomp"), rs.getString("Nom"), rs.getString("Pays"), rs.getInt("annee"));
+            i++;
+        }
+        return competitions;
+    }
+
     
 
     

@@ -8,7 +8,7 @@ public class Team {
     private String Pays;
     private int annee;
 
-    public Team(int ID_E, String Nom, String Pays, int annee) throws SQLException {
+    public Team(int ID_E, String Nom, String Pays) throws SQLException {
         this.ID_E = ID_E;
         this.Nom = Nom;
         this.Pays = Pays;
