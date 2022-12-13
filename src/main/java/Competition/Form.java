@@ -1,11 +1,12 @@
 package Competition;
 
-import javax.swing.*;
-
 public class Form {
-    private JTextArea textArea1;
 
-    private void createUIComponents() {
-        // TODO: place custom component creation code here
+    //make it do the same work as Main.java
+    //in the same way 
+
+    public static void main(String[] args) {
+        // TODO code application logic here
     }
+    
 }
