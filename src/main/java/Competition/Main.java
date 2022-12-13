@@ -23,6 +23,7 @@ public class Main {
         DesPanels(frame);
         
         JPanel CompetitionPanel = new JPanel();
+
         JComboBox selectCompt = new JComboBox();
         selectCompt.setPreferredSize(new Dimension(100, 20));
         CompetitionPanel.setLayout(new FlowLayout());
