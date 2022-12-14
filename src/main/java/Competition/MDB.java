@@ -15,10 +15,8 @@ public class MDB {
     }
 
 
-    //constructor vide
     public MDB() throws SQLException {
     }
-    //mysql connection 
 
     // Team(ID_E,Nom,Pays)
     //Compettion(Ncomp,Nom,Pays,annee)
