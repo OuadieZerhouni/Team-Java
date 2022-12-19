@@ -19,7 +19,7 @@ public class Competition {
         this.annee = annee;
         MDB.createCompetition(Ncomp, Nom, Pays, annee);
     }
-    public Competition(int Ncomp, String Nom, String Pays, int annee,int i) throws SQLException {
+    public Competition(int Ncomp, String Nom, String Pays, int annee,int e) throws SQLException {
         this.Ncomp = Ncomp;
         this.Nom = Nom;
         this.Pays = Pays;
@@ -49,7 +49,5 @@ public class Competition {
     public void setAnnee(int annee) {
         this.annee = annee;
     }
-    public void addTeam(Team Team) {
-        teamList[teamList.length] = Team.getID_E();
-    }
+
 }
